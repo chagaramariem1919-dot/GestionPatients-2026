@@ -1,0 +1,81 @@
+<Patient id="P001">
+    <Nom>Chagara</Nom>
+    <Prenom>Mariem</Prenom>
+    <DateNaissance>2003-03-05</DateNaissance>
+    <Sexe>Feminin</Sexe>
+    <GroupeSanguin>O+</GroupeSanguin>
+    <TypeDrepanocytose>S/S</TypeDrepanocytose>
+
+    <Traitement>
+        <Nom>Acide folique</Nom>
+        <Debut>2006-11-15</Debut>
+        <Posologie>2 comprimé/jour</Posologie>
+        <Observation>Maladie diagnostiquée à 1 an et 4 mois</Observation>
+    </Traitement>
+
+    <Crises>
+        <Crise id="C001">
+            <Date>2013-04-07</Date>
+            <Gravite>Élevée</Gravite>
+            <Type>Vaso-occlusive (membres inférieurs)</Type>
+            <Traitement>Hydratation + Analgésiques puissants</Traitement>
+            <DureeHospitalisation>2 semaines</DureeHospitalisation>
+        </Crise>
+        <Crise id="C002">
+            <Date>2019-05-22</Date>
+            <Gravite>Élevée</Gravite>
+            <Type>Douleurs abdominal</Type>
+            <Traitement>Hydratation + Antibiotiques</Traitement>
+            <DureeHospitalisation>3 semaines</DureeHospitalisation>
+
+        </Crise>
+        <Crise id="C003">
+            <Date>2025-02-15</Date>
+            <Gravite>Élevée</Gravite>
+            <Type>Syndrome thoracique aigu</Type>
+            <CRP>204mg/L</CRP>
+            <Traitement>Oxygénothérapie + Hydratation + Claforan</Traitement>
+            <DureeHospitalisation>1 mois</DureeHospitalisation>
+        </Crise>
+    </Crises>
+
+    <Transfusions>
+        <Transfusion id="T001">
+            <Debut>2020-08-15</Debut>
+            <Frequence>Tous les 2 mois</Frequence>
+            <Technique>Cathéter veineux</Technique>
+            <Lieu>Banque de sang</Lieu>
+            <Observation>Aucune complication observée</Observation>
+        </Transfusion>
+
+        <Transfusion id="T002">
+            <Debut>2025-07-17</Debut>
+            <Frequence>Tous les 2 mois</Frequence>
+            <Technique>Manuelle</Technique>
+            <Lieu>Banque de sang</Lieu>
+            <Observation>Présence d’allergie</Observation>
+        </Transfusion>
+    </Transfusions>
+
+
+    <Medecin id="M001">
+        <Nom>Aloulou</Nom>
+        <Prenom>Hajer</Prenom>
+        <Specialite>Pediatrie</Specialite>
+    </Medecin>
+
+    <Medecin id="M002">
+        <Nom>Ben Kahla</Nom>
+        <Prenom>Aicha</Prenom>
+        <Specialite>Hématologie</Specialite>
+    </Medecin>
+
+    <Medecin id="M003">
+        <Nom>Bouali</Nom>
+        <Prenom>Leila</Prenom>
+        <Specialite>Médecin de la banque de sang</Specialite>
+    </Medecin>
+</Patient>
+
+
+

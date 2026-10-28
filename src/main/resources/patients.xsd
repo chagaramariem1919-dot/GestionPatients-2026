@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Définition de l'élément Patient -->
+    <xs:element name="Patient">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Nom" type="xs:string"/>
+                <xs:element name="Prenom" type="xs:string"/>
+                <xs:element name="DateNaissance" type="xs:date"/>
+                <xs:element name="Sexe">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="Feminin"/>
+                            <xs:enumeration value="Masculin"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="GroupeSanguin">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="O+"/>
+                            <xs:enumeration value="O-"/>
+                            <xs:enumeration value="A+"/>
+                            <xs:enumeration value="A-"/>
+                            <xs:enumeration value="B+"/>
+                            <xs:enumeration value="B-"/>
+                            <xs:enumeration value="AB+"/>
+                            <xs:enumeration value="AB-"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="TypeDrepanocytose" type="xs:string"/>
+
+                <!-- Traitement -->
+                <xs:element name="Traitement">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Nom" type="xs:string"/>
+                            <xs:element name="Debut" type="xs:date"/>
+                            <xs:element name="Posologie" type="xs:string"/>
+                            <xs:element name="Observation" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- Crises -->
+                <xs:element name="Crises">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Crise" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Date" type="xs:date"/>
+                                        <xs:element name="Gravite" type="xs:string"/>
+                                        <xs:element name="Type" type="xs:string"/>
+                                        <xs:element name="CRP" type="xs:string" minOccurs="0"/>
+                                        <xs:element name="Traitement" type="xs:string"/>
+                                        <xs:element name="DureeHospitalisation" type="xs:string"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- Transfusions -->
+                <xs:element name="Transfusions">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Transfusion" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Debut" type="xs:date"/>
+                                        <xs:element name="Frequence" type="xs:string"/>
+                                        <xs:element name="Technique" type="xs:string"/>
+                                        <xs:element name="Lieu" type="xs:string"/>
+                                        <xs:element name="Observation" type="xs:string"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- Médecins -->
+                <xs:element name="Medecin" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Nom" type="xs:string"/>
+                            <xs:element name="Prenom" type="xs:string"/>
+                            <xs:element name="Specialite" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
+
